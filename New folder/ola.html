@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Website with Header, Cards, and Footer</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Main content wrapper */
+    main {
+      flex-grow: 1;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Card styles */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      flex-grow: 1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 40px;
+      font-size: 1rem;
+      margin-top: auto;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    My Awesome Website
+  </header>
+
+  <main>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?nature,water" alt="Nature Image" />
+      <h3>Beautiful Nature</h3>
+      <p>Explore the breathtaking beauty of nature with stunning landscapes and serene waters.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?technology" alt="Technology Image" />
+      <h3>Latest Technology</h3>
+      <p>Stay updated with the newest advancements in technology and innovative gadgets.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?city" alt="City Image" />
+      <h3>Urban Life</h3>
+      <p>Discover the hustle and bustle of city life, vibrant cultures, and urban adventures.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/400x300?space" alt="Space Image" />
+      <h3>Space Exploration</h3>
+      <p>Dive into the mysteries of space and the exciting future of exploration beyond Earth.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 My Awesome Website. All rights reserved.
+  </footer>
+</body>
+</html>
